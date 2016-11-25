@@ -11,11 +11,19 @@ import org.springframework.web.bind.annotation.RestController;
 public class ExampleController {
 
     @RequestMapping("/")
-    String home() {
-        return "Hello World it's " + DateTime.now();
+    public ExampleResponse home() {
+        return new ExampleResponse("Hello World it's " + DateTime.now());
     }
 
     public static void main(String[] args) throws Exception {
         SpringApplication.run(ExampleController.class, args);
     }
+    
+    private static class ExampleResponse {
+        private final String message;
+
+        public ExampleResponse(String message) {
+            this.message = message;
+        }
+    } 
 }
