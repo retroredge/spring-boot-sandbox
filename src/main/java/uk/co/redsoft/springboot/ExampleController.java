@@ -25,5 +25,9 @@ public class ExampleController {
         public ExampleResponse(String message) {
             this.message = message;
         }
-    } 
+
+        public String getMessage() {
+            return message;
+        }
+    }
 }
