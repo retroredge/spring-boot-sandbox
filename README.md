@@ -23,3 +23,9 @@ Endpoints
 ----
 Application - http://localhost:8080/
 
+Run in Docker container
+----
+```
+./run-docker-image.sh
+```
+
