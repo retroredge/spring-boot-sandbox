@@ -12,7 +12,7 @@ public class ExampleController {
 
     @RequestMapping("/")
     public ExampleResponse home() {
-        return new ExampleResponse("Hello World it's " + DateTime.now());
+        return new ExampleResponse("Hello World it's " + DateTime.now() + " on port: " + System.getProperty("PORT"));
     }
 
     public static void main(String[] args) throws Exception {
