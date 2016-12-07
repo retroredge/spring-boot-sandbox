@@ -15,9 +15,9 @@ public class ExampleController {
 
     @RequestMapping("/")
     public ExampleResponse home() {
-        return new ExampleResponse("Java system property (server.port): " + System.getProperty("server.port")
-                                 + ". Environment Variable via System.getenv(MESSAGE): " + System.getenv("MESSAGE")
-                                 + ". Environment Variable via @Value annotation (MESSAGE): " + message);
+        return new ExampleResponse("Java system property (server.port): [" + System.getProperty("server.port")
+                                 + "]. Environment Variable via System.getenv(MESSAGE): [" + System.getenv("MESSAGE")
+                                 + "]. Environment Variable via @Value annotation (MESSAGE): [" + message + "]");
     }
 
     public static void main(String[] args) throws Exception {
