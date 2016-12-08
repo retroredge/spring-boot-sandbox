@@ -6,6 +6,9 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @RestController
 @EnableAutoConfiguration
 public class ExampleController {
@@ -15,9 +18,12 @@ public class ExampleController {
 
     @RequestMapping("/")
     public ExampleResponse home() {
-        return new ExampleResponse("Java system property (server.port): [" + System.getProperty("server.port")
-                                 + "]. Environment Variable via System.getenv(MESSAGE): [" + System.getenv("MESSAGE")
-                                 + "]. Environment Variable via @Value annotation (MESSAGE): [" + message + "]");
+        ExampleResponse messages = new ExampleResponse();
+        messages.addMessage("Java system property (server.port): [" + System.getProperty("server.port") + "]");
+        messages.addMessage("Environment variable via System.getenv(MESSAGE): [" + System.getenv("MESSAGE") + "]");
+        messages.addMessage("Environment variable via @Value annotation (MESSAGE): [" + this.message + "]");
+
+        return messages;
     }
 
     public static void main(String[] args) throws Exception {
@@ -25,13 +31,13 @@ public class ExampleController {
     }
     
     private static class ExampleResponse {
-        private final String message;
+        private final List<String> message = new ArrayList<>();
 
-        public ExampleResponse(String message) {
-            this.message = message;
+        public void addMessage(String message) {
+            this.message.add(message);
         }
 
-        public String getMessage() {
+        public List<String> getMessage() {
             return message;
         }
     }
