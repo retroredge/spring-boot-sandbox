@@ -5,6 +5,6 @@
 echo "$(tput setaf 3)Running Spring Boot Sandbox in Docker...$(tput sgr 0)"
 docker build -t spring-boot-sandbox .
 docker rm -f spring-boot-sandbox
-docker run -d -p 8080:8080 --name spring-boot-sandbox  spring-boot-sandbox java -Dserver.port=8080 -jar /root/app.jar
+docker run -d -p 8080:8080 --name spring-boot-sandbox  spring-boot-sandbox java -Dserver.port=$PORT -jar /root/app.jar
 docker ps
 echo "$(tput setaf 2)Click here --> http://localhost:8080/$(tput sgr 0)"
