@@ -21,8 +21,8 @@ public class ExampleController {
     @RequestMapping("/")
     public ExampleResponse home() {
         ExampleResponse messages = new ExampleResponse();
-        messages.addMessage("Java system server.port =" + System.getProperty("server.port"));
-        messages.addMessage("Environment variable MESSAGE =" + System.getenv("MESSAGE"));
+        messages.addMessage("Java system server.port=" + System.getProperty("server.port"));
+        messages.addMessage("Environment variable MESSAGE=" + System.getenv("MESSAGE"));
         return messages;
     }
 
