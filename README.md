@@ -32,11 +32,11 @@ http://localhost:8080/greeting
 
 Actuator Endpoints
 ----
-http://localhost:8080/info
-http://localhost:8080/metircs
-http://localhost:8080/health
-http://localhost:8080/trace
-http://localhost:8080/beans
+http://localhost:8080/actuator/info
+http://localhost:8080/actuator/metircs
+http://localhost:8080/actuator/health
+http://localhost:8080/actuator/trace
+http://localhost:8080/actuator/beans
 
 
 Run locally in Docker container
