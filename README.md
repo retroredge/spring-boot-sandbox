@@ -24,11 +24,19 @@ or
 mvn spring-boot:run
 ```
 
-Endpoints
+Custom Endpoints
 ----
-GET http://localhost:8080/
-GET http://localhost:8080/greeting
+http://localhost:8080/
+http://localhost:8080/greeting
 
+
+Actuator Endpoints
+----
+http://localhost:8080/info
+http://localhost:8080/metircs
+http://localhost:8080/health
+http://localhost:8080/trace
+http://localhost:8080/beans
 
 
 Run locally in Docker container
