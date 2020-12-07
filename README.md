@@ -3,7 +3,7 @@ spring-boot-sandbox
 
 A simple Spring Boot project for experimenting with the framework.
 
-The application uses Jetty rather than the default Tomcat Web server.
+The application uses Jetty rather than the default Tomcat Web server. See `spring-boot-starter-jetty` in the POM file.
 
 The root endpoint outputs a parameterised message. The parameters are picked up from Java 
 system properties and environment variables.
@@ -26,7 +26,10 @@ mvn spring-boot:run
 
 Endpoints
 ----
-Application Root - http://<host>:<port>/
+GET http://localhost:8080/
+GET http://localhost:8080/greeting
+
+
 
 Run locally in Docker container
 ----
