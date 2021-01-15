@@ -24,7 +24,7 @@ or
 mvn spring-boot:run
 ```
 
-Custom Endpoints
+Endpoints
 ----
 http://localhost:8080/
 http://localhost:8080/greeting
@@ -64,4 +64,18 @@ http://localhost:5000/
 ```
 
 Note the .env file provides the environment variables when running Heroku locally.
+
+
+TODO
+----
+
+- Slf4j
+- Add a filter
+- @MockBean
+- @Bean
+- @Configuration
+- Profiles
+
+
+
 

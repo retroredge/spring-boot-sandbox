@@ -1,9 +1,10 @@
 package uk.co.redsoft.springboot;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
@@ -13,8 +14,12 @@ import java.util.List;
 @EnableAutoConfiguration
 public class ExampleController {
 
-    @RequestMapping("/")
+    private static final Logger logger = LoggerFactory.getLogger(ExampleController.class);
+
+    @GetMapping("/")
     public ExampleResponse home() {
+        logger.info("Root endpoint");
+
         ExampleResponse messages = new ExampleResponse();
         messages.addMessage("Java system server.port=" + System.getProperty("server.port"));
         messages.addMessage("Environment variable MESSAGE=" + System.getenv("MESSAGE"));
@@ -23,6 +28,8 @@ public class ExampleController {
 
     @GetMapping("/greeting")
     public String sayHello() {
+        logger.info("Greeting endpoint");
+
         return "Hello";
     }
 
