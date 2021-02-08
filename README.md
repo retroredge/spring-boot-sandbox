@@ -65,6 +65,9 @@ http://localhost:5000/
 
 Note the .env file provides the environment variables when running Heroku locally.
 
+Demonstrate the correlation id filter
+----
+```curl -H "X-Correlation_ID: 1234" http://localhost:8080/greeting```
 
 TODO
 ----
