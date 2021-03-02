@@ -73,12 +73,11 @@ TODO
 ----
 
 - Slf4j
-- Add a filter
 - @MockBean
 - @Bean
 - @Configuration
 - Profiles
-
+- Lombok
 
 
 
