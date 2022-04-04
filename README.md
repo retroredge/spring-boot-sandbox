@@ -5,10 +5,10 @@ A simple Spring Boot project for experimenting with the framework.
 
 The application uses Jetty rather than the default Tomcat Web server. See `spring-boot-starter-jetty` in the POM file.
 
-The root endpoint outputs a parameterised message. The parameters are picked up from Java 
-system properties and environment variables.
+The root endpoint outputs a parameterised message. The parameters are picked up from Java system properties and 
+environment variables.
 
-The project has Docker file and a Heroku Procfile and .env file.
+The project has Docker file and a shell script to build and run the application using Docker.
 
 Build
 ----
@@ -42,28 +42,10 @@ http://localhost:8080/actuator/beans
 Run locally in Docker container
 ----
 ```
-./run-docker-image.sh
+./run.sh
 http://localhost:8080/
 ```
 
-Run on Heroku
-----
-```
-heroku create
-git push heroku master
-heroku ps:scale web=1
-./run-docker-image.sh
-heroku open
-```
-
-Test Locally with Heroku
-----
-```
-heroku local web
-http://localhost:5000/
-```
-
-Note the .env file provides the environment variables when running Heroku locally.
 
 Demonstrate the correlation id filter
 ----
