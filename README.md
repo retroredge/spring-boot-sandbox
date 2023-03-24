@@ -18,29 +18,36 @@ mvn clean package
 
 Run
 ----
+
 ```
 java -jar target/spring-boot-sandbox-1.0-SNAPSHOT.jar
-or
+```
+
+Or
+
+```
 mvn spring-boot:run
 ```
 
 Endpoints
 ----
-http://localhost:8080/
-http://localhost:8080/greeting
+- http://localhost:8080/
+- http://localhost:8080/greeting
 
 
 Actuator Endpoints
 ----
-http://localhost:8080/actuator/info
-http://localhost:8080/actuator/metircs
-http://localhost:8080/actuator/health
-http://localhost:8080/actuator/trace
-http://localhost:8080/actuator/beans
+
+- http://localhost:8080/actuator/info
+- http://localhost:8080/actuator/metircs
+- http://localhost:8080/actuator/health
+- http://localhost:8080/actuator/trace
+- http://localhost:8080/actuator/beans
 
 
 Run locally in Docker container
 ----
+
 ```
 ./run.sh
 http://localhost:8080/
@@ -49,6 +56,7 @@ http://localhost:8080/
 
 Demonstrate the correlation id filter
 ----
+
 ```curl -H "X-Correlation_ID: 1234" http://localhost:8080/greeting```
 
 TODO
