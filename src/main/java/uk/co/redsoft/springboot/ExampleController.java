@@ -2,7 +2,6 @@ package uk.co.redsoft.springboot;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -33,10 +32,6 @@ public class ExampleController {
         return "Hello";
     }
 
-    public static void main(String[] args) throws Exception {
-        SpringApplication.run(ExampleController.class, args);
-    }
-    
     private static class ExampleResponse {
         private final List<String> message = new ArrayList<>();
 
