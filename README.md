@@ -13,7 +13,7 @@ The project has Docker file and a shell script to build and run the application 
 Build
 ----
 ```
-mvn clean package
+./mvnw clean package
 ```
 
 Run
@@ -26,7 +26,7 @@ java -jar target/spring-boot-sandbox-1.0-SNAPSHOT.jar
 Or
 
 ```
-mvn spring-boot:run
+./mvnw spring-boot:run
 ```
 
 Endpoints
@@ -58,6 +58,19 @@ Demonstrate the correlation id filter
 ----
 
 ```curl -H "X-Correlation_ID: 1234" http://localhost:8080/greeting```
+
+
+Allure Reporting
+----
+To view via a local server
+```
+./mvnw allure:serve
+```
+
+To generate 
+```
+./mvnw allure:report
+```
 
 TODO
 ----
